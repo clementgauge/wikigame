@@ -1,0 +1,111 @@
+
+/* ===== Style principal ===== */
+
+body{
+background-image: url("./img/fontstylé.jpg");
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat; 
+padding: 60px 0px 0px 0px;
+z-index:0;
+}
+
+
+h1, h2, h3 {
+  color: #00FFFF;
+  text-shadow: 0 0 5px #00FFFF, 0 0 10px #9D00FF;
+  font-weight: bold;
+}
+
+.lead {
+  color: #cccccc;
+  font-family: 'Arial', sans-serif;
+}
+
+
+
+/* ===== NAVBAR ===== */
+.navbar-dark {
+  background-color: #0a0a0a !important;
+  border-bottom: 1px solid #333;
+}
+
+.navbar-brand, .nav-link {
+  color: #00FFFF !important;
+}
+
+.nav-link:hover {
+  color: #FF003C !important;
+}
+.navbar-dark .fa-bars {
+  color: #f7f6f4; /* Icône du menu */
+}
+
+
+/* ===== CONTENU PRINCIPAL ===== */
+.row-content {
+  margin: 0 auto;
+  padding: 15px 0;
+  border-bottom: 1px ridge #28a745; /* Vert émeraude */
+  min-height: 400px;
+}
+
+/* Hero section */
+.hero-section {
+  text-align: center;
+  padding: 10px 10px;
+  background-color: #1E1E1E;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  border: 1px solid #333;
+}
+
+/* button */
+
+.gaming-button {
+  background: linear-gradient(90deg, #FF003C, #9D00FF); /* Dégradé rose/violet */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  margin-top: 20px;
+  animation: pulse 2s infinite;
+}
+
+.gaming-button:hover {
+  background: linear-gradient(90deg, #9D00FF, #00FFFF); /* Dégradé inversé */
+  box-shadow: 0 0 15px rgba(157, 0, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+
+
+
+/* ===== Titre ===== */
+.Wikigame{
+margin-top: 5%;
+padding: 12px 24px;
+text-align: center;
+}
+
+
+
+
+
+/* ===== Carousel ===== */
+.carousel-item img{
+  width: auto;
+  height: 400px;
+}
+
+.carousel-inner{
+  margin-top: auto;
+  background-color: black;
+  width: auto;
+  height: 400px;
+}

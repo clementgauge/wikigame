@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wikigame</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+    }
+
+
+    /* ===== NAVBAR ===== */
+
+    nav {
+
+      background: linear-gradient(rgb(107, 106, 106), rgb(0, 0, 0));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    /* logo */
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-sections {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left,
+    .nav-center,
+    .nav-right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-center {
+      justify-content: center;
+      flex: 1;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f39c12;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-sections {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+
+      .nav-sections.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-center {
+        flex: unset;
+      }
+    }
+
+
+
+    /* --- IMAGE PRINCIPAL --- */
+    .imgwiki1{
+      margin-top: -4px;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+
+
+
+    
+    /* --- CAROUSEL --- */
+    .carousel {
+      width: 80%;
+      overflow: hidden;
+      border-radius: 15px;
+      margin: 40px auto;
+    }
+
+    .carousel-track {
+      display: flex;
+      animation: scroll 15s linear infinite;
+    }
+
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 350px;
+      margin: 15px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .carousel-item img {
+      width: 300px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .carousel-item img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-180%); }
+    }
+</style>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="menu-toggle" onclick="document.querySelector('.nav-sections').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-sections">
+      <div class="nav-left">
+        <div class="logo"><img src="img/logogame.png" class="rounded float-left" height="50" width="70"></span></div>
+        <a href="sitewebbase.html">Accueil</a>
+      <!--<a href="#">Actus</a>-->
+      </div>
+
+      <div class="nav-center">
+        <!-- <a href="sitewebbase.html">Accueil</a> -->
+      </div>
+
+      <div class="nav-right">
+        <!--<a href="#">Langue</a>
+        <a href="#">Paramètre</a>-->
+      </div>
+    </div>
+  </nav>
+
+  <!-- IMAGE PRINCIPALE -->
+  <img class="imgwiki1" src="img/imagesiteweb1.png" alt="wikigame">
+
+  <!-- CAROUSEL -->
+  <div class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-item">
+        <a href="minecraft/minecraft.html">
+          <img src="img/MineCraftTitre.jpg" alt="Minecraft">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="rocketleague/rocketleague.html">
+          <img src="img/rocketleaguej2.jpg" alt="Rocketleague">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="forgotten path (1) hk/index.html">
+          <img src="img/CrossRoads4.jpg" alt="HollowKnight">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="greenpath (2)/index.html">
+          <img src="img/GreenPath4.jpg" alt="EldenRing">
+        </a>
+      </div>
+
+      <!-- Duplication pour boucle infinie -->
+      <div class="carousel-item">
+        <a href="./city of tear (4)/index.html">
+          <img src="img/City_of_Tears_Map.jpg" alt="City of Tear">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./Fungal Wastes (3)/index.html">
+          <img src="img/FungalWastes.jpg" alt="Fungal Wastes">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./CristalPeak(6)/index.html">
+          <img src="img/CrystalPeak.jpg" alt="Cristal Peak">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="./égout royaux (5)/index.html">
+          <img src="img/EgoutRoyaux.jpg" alt="Egout royaux">
+        </a>
+      </div>
+        <div class="carousel-item">
+        <a href="minecraft/minecraft.html">
+          <img src="img/MineCraftTitre.jpg" alt="Minecraft">
+        </a>
+      </div>
+    
+    </div>
+  </div>
+
+
+
+
+
+
+<div class="social-container">
+    <ul class="social-icons">
+        <li><a href="https://discord.gg/WKsysy3n"><i class="fa fa-discord"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+    </ul>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+
+
+
+/* Centrer le conteneur sur toute la page */
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* pleine hauteur de la fenêtre */
+    background-color: #000; /* fond noir pour contraste (optionnel) */
+}
+
+/* Retirer les styles par défaut de la liste */
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* espace entre les icônes */
+    padding: 0;
+    margin: 0;
+}
+
+/* Style des liens */
+.social-icons a {
+    color: white; /* icônes blanches */
+    font-size: 40px; /* taille des icônes */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Effet au survol */
+.social-icons a:hover {
+    transform: scale(1.2); /* agrandit légèrement l’icône */
+    color: #00aced; /* couleur au survol (ex: bleu clair) */
+}
+
+</style>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
